@@ -76,8 +76,8 @@ o() {
 #}
 
 # add custom scripts folder to path
-if [[ ":$PATH:" != *":${HOME}/main/3__sys/scripts/:"* ]]; then
-    export PATH="${HOME}/main/3__sys/scripts/:$PATH"
+if [[ ":$PATH:" != *":/home/steff/main/3__sys/scripts/:"* ]]; then
+    export PATH="/home/steff/main/3__sys/scripts/:$PATH"
 fi
 
 # in bash to the left, show only user, not host, and only current folder
