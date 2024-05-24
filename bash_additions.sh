@@ -99,3 +99,6 @@ stty -ixon
 # add hidden files to bash expansion
 shopt -s dotglob
 
+# change interrupt to ctrl-x
+stty intr ^X
+
