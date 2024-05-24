@@ -65,16 +65,6 @@ o() {
   xdg-open "$@" &> /dev/null
 }
 
-# enable changing titles of terminal windows
-# https://unix.stackexchange.com/questions/177572/how-to-rename-terminal-tab-title-in-gnome-terminal
-#function set_terminal_title() {
-#  if [[ -z "$ORIG" ]]; then
-#    ORIG=$PS1
-#  fi
-#  TITLE="\[\e]2;$*\a\]"
-#  PS1=${ORIG}${TITLE}
-#}
-
 # add custom scripts folder to path
 if [[ ":$PATH:" != *":/home/steff/main/3__sys/scripts/:"* ]]; then
     export PATH="/home/steff/main/3__sys/scripts/:$PATH"
