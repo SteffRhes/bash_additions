@@ -21,7 +21,7 @@ c() {
   if [ $# -eq 0 ]; then
     cd ..
   else
-    cd "$1"
+    cd "$1" > /dev/null
   fi
 }
 
@@ -64,7 +64,7 @@ d() {
 # cd bookmark links
 export CDPATH=".:/home/steff/bookmarks:/"
 cb() {
-  cd -P "$1"
+  cd -P "$1" > /dev/null
 }
 
 # open file with default gui application
