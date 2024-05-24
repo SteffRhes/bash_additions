@@ -7,14 +7,14 @@ alias l='ls -lh --group-directories-first'
 alias ll='ls -alF --group-directories-first'
 alias r='rsync -a'
 alias gs='git status'
+alias gb='git branch'
+alias gl='git log --graph --all'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias ga='git add'
 alias gc='git commit -m'
 alias gpl='git pull'
 alias gps='git push'
-alias gb='git branch'
-alias gl='git log --graph --all'
 
 # convenient folder change
 c() {
