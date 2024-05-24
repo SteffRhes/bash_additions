@@ -5,6 +5,9 @@
 # aliases
 alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
+alias dc='docker-compose'
+
+# git aliases
 alias gs='git status'
 alias gb='git branch'
 alias gr='git remote -v'
