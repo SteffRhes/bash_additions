@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# add to bash with `source bashrc_additions.sh`
+# add to current bash or .bashrc with `source bashrc_additions.sh`
 
 # aliases
 alias l='ls -lh --group-directories-first'
