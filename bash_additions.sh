@@ -61,6 +61,12 @@ d() {
   trash-put "$@"
 }
 
+# cd bookmark links
+export CDPATH=".:/home/steff/bookmarks:/"
+cb() {
+  cd -P "$1"
+}
+
 # open file with default gui application
 o() {
   xdg-open "$@" &> /dev/null
