@@ -3,8 +3,7 @@
 # add to current bash or .bashrc with `source bashrc_additions.sh`
 
 # aliases
-alias l='ls -lh --group-directories-first'
-alias ll='ls -alF --group-directories-first'
+alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
 alias gs='git status'
 alias gb='git branch'
