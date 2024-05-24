@@ -29,7 +29,7 @@ c() {
 }
 
 # cd bookmark links
-export CDPATH="${HOME}/bookmarks"
+export CDPATH="${HOME}/main/3__sys/configs/bookmarks"
 complete -o nospace -F _cd cb
 alias cb="cd -P > /dev/null"
 
