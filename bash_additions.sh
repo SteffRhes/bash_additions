@@ -28,6 +28,11 @@ c() {
   fi
 }
 
+# cd bookmark links
+export CDPATH="${HOME}/bookmarks"
+complete -o nospace -F _cd cb
+alias cb="cd -P > /dev/null"
+
 # tree 
 t() {
   if [[ "$1" =~ ^[0-9]+$ ]]; then
@@ -62,12 +67,6 @@ gf() {
 # trash 
 d() {
   trash-put "$@"
-}
-
-# cd bookmark links
-export CDPATH=".:/home/steff/bookmarks:/"
-cb() {
-  cd -P "$1" > /dev/null
 }
 
 # open file with default gui application
