@@ -40,10 +40,11 @@ if [[ ":${CDPATH}:" != *":${custom_var_bookmarks}:"* ]]; then
 fi
 # reuse autocomplete functionality of `cd`
 complete -o nospace -F _cd c
-# if no param is passed, go one folder above
 c() {
+  # if no param is passed, go one folder above
   if [ $# -eq 0 ]; then
     cd ..
+  # if param is passed, go there
   else
     cd -P "$1" > /dev/null
   fi
