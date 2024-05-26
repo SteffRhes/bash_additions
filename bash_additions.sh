@@ -82,8 +82,8 @@ o() {
 }
 
 # add custom scripts folder to path
-if [[ ":$PATH:" != *":/home/steff/main/3__sys/scripts/:"* ]]; then
-    export PATH="/home/steff/main/3__sys/scripts/:$PATH"
+if [[ ":$PATH:" != *":${custom_var_scripts}:"* ]]; then
+    export PATH="${custom_var_scripts}:$PATH"
 fi
 
 # in bash to the left, show only user, not host, and only current folder
