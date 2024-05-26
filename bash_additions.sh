@@ -19,19 +19,26 @@ alias gc='git commit -m'
 alias gpl='git pull'
 alias gps='git push'
 
-# convenient folder change
+
+# function `c`
+# convenient folder change with integrated bookmarks autocomplete
+
+# add folder with custom sym links (treated as bookmarks) to CDPATH, so that `cd` can use it
+# anywhere 
+if [[ ":${CDPATH}:" != *":${custom_var_bookmarks}:"* ]]; then
+    export CDPATH="${custom_var_bookmarks}:$CDPATH"
+fi
+# reuse autocomplete functionality of `cd`
+complete -o nospace -F _cd c
+# if no param is passed, go one folder above
 c() {
   if [ $# -eq 0 ]; then
     cd ..
   else
-    cd "$1" > /dev/null
+    cd -P "$1" > /dev/null
   fi
 }
 
-# cd bookmark links
-export CDPATH="${HOME}/main/3__sys/configs/bookmarks"
-complete -o nospace -F _cd cb
-alias cb="cd -P > /dev/null"
 
 # tree 
 t() {
