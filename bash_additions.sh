@@ -101,3 +101,6 @@ shopt -s dotglob
 # change interrupt to ctrl-x
 stty intr ^X
 
+# remap delete word from ctrl-w to ctrl-backpsace
+stty werase \^H
+
