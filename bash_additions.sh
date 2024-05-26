@@ -1,8 +1,16 @@
 #!/bin/bash
 
-# add to current bash or .bashrc with `source bashrc_additions.sh`
+# add to current bash or ~.bashrc with `source bashrc_additions.sh`
+#
+# optional additional environment needed to be set manually in ~.bashrc variables for some 
+# functions:
+# - custom_var_bookmarks: for custom function `c`
+# - custom_var_scripts: for loading additional custom scripts into $PATH
+
 
 # aliases
+
+# general aliases
 alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
 alias dc='docker-compose'
@@ -40,7 +48,8 @@ c() {
 }
 
 
-# tree 
+# function `t`
+# quick tree call, with optional first parameter being depth and seccond a specific folder
 t() {
   if [[ "$1" =~ ^[0-9]+$ ]]; then
     if [[ "$2" != "" ]]; then
@@ -55,49 +64,65 @@ t() {
   fi
 }
 
-# find 
+
+# function `f`
+# quick find 
 f() {
   find -L . -iname "*$1*"  
 }
 
-# grep 
+
+# function `g`
+# quick grep 
 g() {
   grep -R --color -inr -F "$1" .  
 }
 
-# grep and find 
+
+# function `gf`
+# quick grep and find 
 gf() {
   g "$1"
   f "$1"
 }
 
-# trash 
+
+# function `d`
+# quick trash 
 d() {
   trash-put "$@"
 }
 
+
+# function `o`
 # open file with default gui application
 o() {
   xdg-open "$@" &> /dev/null
 }
+
 
 # add custom scripts folder to path
 if [[ ":$PATH:" != *":${custom_var_scripts}:"* ]]; then
     export PATH="${custom_var_scripts}:$PATH"
 fi
 
-# in bash to the left, show only user, not host, and only current folder
-#export PS1="\[\e[32m\]\u:\[\e[34m\]\W\[\e[30m\]$ "
-# for normal user:
+
+# commandline status and coloring
+# show only user, no host, and only current folder
+# for normal user (color green):
 export PS1="\[\e[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ "
-# for root:
+# for root (color red):
 #export PS1="\[\e[01;31m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ "
 
-# show current folder as terminal title
+
+# show current folder as terminal title (and show `root` explicitley)
 # for normal user:
 PROMPT_COMMAND='echo -ne "\033]0;${PWD/${PWD%*/*}\/}\007"'
 # for root:
 #PROMPT_COMMAND='echo -ne "\033]0;root: ${PWD/${PWD%*/*}\/}\007"'
+
+
+# various input controls
 
 # disable XOFF, so that ctrl+s can be used for going back in bash reverse-i search (ctrl-r)
 stty -ixon
