@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# add to current bash or ~.bashrc with `source bashrc_additions.sh`
+# add content directly to ~.bashrc or load it with `source /path/to/bashrc_additions.sh`
 #
 # optional additional environment needed to be set manually in ~.bashrc variables for some 
 # functions:
-# - custom_var_bookmarks: for custom function `c`
-# - custom_var_scripts: for loading additional custom scripts into $PATH
+# - custom_var_bookmarks: for custom function `c`, uncomment below or copy
+# custom_var_bookmarks=/path/to/bookmarks/
+# - custom_var_scripts: for loading additional custom scripts into $PATH, uncomment below or copy
+# custom_var_scripts=/path/to/scripts/
 
 
 # aliases
