@@ -104,7 +104,7 @@ o() {
 }
 
 
-# add custom scripts folder to path
+# add custom scripts folder to $PATH
 if [[ ":$PATH:" != *":${custom_var_scripts}:"* ]]; then
     export PATH="${custom_var_scripts}:$PATH"
 fi
