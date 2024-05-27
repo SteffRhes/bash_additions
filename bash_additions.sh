@@ -48,6 +48,7 @@ c() {
   else
     cd -P "$1" > /dev/null && l
   fi
+  echo "$(pwd)"
 }
 
 
