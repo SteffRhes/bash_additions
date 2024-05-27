@@ -43,10 +43,10 @@ complete -o nospace -F _cd c
 c() {
   # if no param is passed, go one folder above
   if [ $# -eq 0 ]; then
-    cd ..
+    cd .. && l
   # if param is passed, go there
   else
-    cd -P "$1" > /dev/null
+    cd -P "$1" > /dev/null && l
   fi
 }
 
