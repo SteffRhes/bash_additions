@@ -120,10 +120,10 @@ fi
 
 # commandline status and coloring
 # show only user, no host, and only current folder
-# for normal user (color green):
-export PS1="\[\e[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ "
-# for root (color red):
-#export PS1="\[\e[01;31m\]\u:\[\033[01;34m\]\W\[\033[00m\]\$ "
+# for normal user (cyan):
+export PS1="\[\e[30;01;106m\]\u:\[\033[30;01;106m\]\W\[\033[00m\] "
+# for root (red):
+#export PS1="\[\e[30;01;101m\]\u:\[\033[30;01;101m\]\W\[\033[00m\] "
 
 
 # show current folder as terminal title (and show `root` explicitley)
