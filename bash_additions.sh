@@ -16,6 +16,7 @@
 alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
 alias dc='docker-compose'
+alias m='flatpak run org.gnome.Meld'
 
 # git aliases
 alias gs='git status'
