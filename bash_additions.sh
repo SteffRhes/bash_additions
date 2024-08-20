@@ -148,3 +148,5 @@ stty intr ^X
 # remap delete word from ctrl-w to ctrl-backpsace
 stty werase \^H
 
+# jupyter_gpu_server specifics
+alias v=/home/cuda/sresch/config/dev_env_vim/dev_env_vim_run.sh
