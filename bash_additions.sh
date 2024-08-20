@@ -150,3 +150,4 @@ stty werase \^H
 
 # jupyter_gpu_server specifics
 alias v=/home/cuda/sresch/config/dev_env_vim/dev_env_vim_run.sh
+alias podman-compose=/home/cuda/sresch/config/podman-compose/podman_compose.py
