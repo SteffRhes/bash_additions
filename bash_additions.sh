@@ -40,7 +40,7 @@ if [[ ":${CDPATH}:" != *":${custom_var_bookmarks}:"* ]]; then
     export CDPATH="${custom_var_bookmarks}:$CDPATH"
 fi
 # reuse autocomplete functionality of `cd`
-complete -o nospace -F _cd c
+#complete -o nospace -F _cd c
 c() {
   # if no param is passed, go one folder above
   if [ $# -eq 0 ]; then
