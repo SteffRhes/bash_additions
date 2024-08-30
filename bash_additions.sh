@@ -17,6 +17,7 @@ alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
 alias dc='docker-compose'
 alias m='flatpak run org.gnome.Meld'
+alias p='pwd'
 
 # git aliases
 alias gs='git status'
@@ -122,9 +123,9 @@ fi
 # commandline status and coloring
 # show only user, no host, and only current folder
 # for normal user (cyan):
-export PS1="\[\e[30;01;102m\]\u:\[\033[30;01;102m\]\W\[\033[00m\] "
+export PS1="\[\e[30;01;102m\]\[\033[30;01;102m\]:\[\033[00m\] "
 # for root (red):
-#export PS1="\[\e[30;01;101m\]\u:\[\033[30;01;101m\]\W\[\033[00m\] "
+#export PS1="\[\e[30;01;101m\]\[\033[30;01;101m\]:\[\033[00m\] "
 
 
 # show current folder as terminal title (and show `root` explicitley)
