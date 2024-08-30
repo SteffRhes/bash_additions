@@ -13,11 +13,10 @@
 # aliases
 
 # general aliases
-alias l='ls -lha --group-directories-first'
+alias l='ls -lha --group-directories-first && pwd'
 alias r='rsync -a'
 alias dc='docker-compose'
 alias m='flatpak run org.gnome.Meld'
-alias p='pwd'
 
 # git aliases
 alias gs='git status'
@@ -50,7 +49,6 @@ c() {
   else
     cd -P "$1" > /dev/null && l
   fi
-  pwd
 }
 
 
