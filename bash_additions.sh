@@ -59,14 +59,14 @@ c() {
 t() {
   if [[ "$1" =~ ^[0-9]+$ ]]; then
     if [[ "$2" != "" ]]; then
-      tree -L "$1" "$2"
+      tree -a -L "$1" "$2"
     else
-      tree -L "$1"
+      tree -a -L "$1"
     fi
   elif [[ "$1" != "" ]]; then
-    tree "$1"
+    tree -a "$1"
   else
-    tree
+    tree -a
   fi
 }
 
