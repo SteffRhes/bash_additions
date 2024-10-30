@@ -149,3 +149,13 @@ stty intr ^X
 # remap delete word from ctrl-w to ctrl-backpsace
 stty werase \^H
 
+# unlimited history
+HISTSIZE=-1
+HISTFILESIZE=-1
+
+# append all history
+shopt -s histappend
+
+# ignore duplicates
+HISTCONTROL=ignoreboth
+
