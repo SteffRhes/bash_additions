@@ -156,6 +156,9 @@ HISTFILESIZE=-1
 # append all history
 shopt -s histappend
 
+# Immediately append commands to the history file
+PROMPT_COMMAND='history -a'
+
 # ignore duplicates
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
