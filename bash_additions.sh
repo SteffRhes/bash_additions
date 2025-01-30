@@ -162,10 +162,13 @@ PROMPT_COMMAND='history -a'
 HISTCONTROL=ignoreboth:erasedups
 
 # veld helper
-function vu {
+function dcu {
   docker compose -f "$1" up --force-recreate
 }
-function vr {
+function dcr {
   docker compose -f "$1" run "$2" "$3"
+}
+function dcb {
+  docker compose -f "$1" build
 }
 
