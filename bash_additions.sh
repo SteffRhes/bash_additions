@@ -161,7 +161,8 @@ PROMPT_COMMAND='history -a'
 # ignore duplicates
 HISTCONTROL=ignoreboth:erasedups
 
-# veld helper
+# docker compose shortcuts
+alias dc='docker compose'
 function dcu {
   docker compose -f "$1" up --force-recreate
 }
