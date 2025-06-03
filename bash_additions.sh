@@ -15,7 +15,6 @@
 # general aliases
 alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
-alias dc='docker-compose'
 alias m='flatpak run org.gnome.Meld'
 alias p='pwd'
 
@@ -152,3 +151,29 @@ stty werase \^H
 # jupyter_gpu_server specifics
 alias v=/home/cuda/sresch/container/dev_env_vim/dev_env_vim_run.sh
 alias pc=/home/cuda/sresch/config/podman-compose/podman_compose.py
+
+# unlimited history
+HISTSIZE=-1
+HISTFILESIZE=-1
+
+# append all history
+shopt -s histappend
+
+# Immediately append commands to the history file
+PROMPT_COMMAND='history -a'
+
+# ignore duplicates
+HISTCONTROL=ignoreboth:erasedups
+
+# docker compose shortcuts
+alias dc='docker compose'
+function dcu {
+  docker compose -f "$1" up --force-recreate
+}
+function dcr {
+  docker compose -f "$1" run "$2" "$3"
+}
+function dcb {
+  docker compose -f "$1" build
+}
+
