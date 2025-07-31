@@ -173,3 +173,8 @@ function dcb {
   docker compose -f "$1" build
 }
 
+# function `cl`
+function cl {
+  cat "$1" | wl-copy
+}
+
