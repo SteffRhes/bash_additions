@@ -102,7 +102,9 @@ d() {
 # function `o`
 # open file with default gui application
 o() {
-  xdg-open "$@" &> /dev/null
+  for file in "$@"; do
+    xdg-open "$file" &> /dev/null
+  done
 }
 
 
