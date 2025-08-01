@@ -15,7 +15,6 @@
 # general aliases
 alias l='ls -lha --group-directories-first'
 alias r='rsync -a'
-alias m='flatpak run org.gnome.Meld'
 alias p='pwd'
 
 # git aliases
@@ -103,7 +102,7 @@ d() {
 # open file with default gui application
 o() {
   for file in "$@"; do
-    xdg-open "$file" &> /dev/null
+    xdg-open "$file" &> /dev/null &
   done
 }
 
@@ -180,3 +179,6 @@ function cl {
   cat "$1" | wl-copy
 }
 
+function m {
+  flatpak run org.gnome.meld "$@" &> /dev/null &
+}
