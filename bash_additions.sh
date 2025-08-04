@@ -179,6 +179,11 @@ function cl {
   cat "$1" | wl-copy
 }
 
+# function `m`
 function m {
   flatpak run org.gnome.meld "$@" &> /dev/null &
 }
+
+# disable docker BuildKit due to errors
+export DOCKER_BUILDKIT=0
+
