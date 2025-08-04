@@ -163,15 +163,15 @@ PROMPT_COMMAND='history -a'
 HISTCONTROL=ignoreboth:erasedups
 
 # docker compose shortcuts
-alias dc='docker-compose'
+alias dc='docker compose'
 function dcu {
-  docker-compose -f "$1" up --force-recreate
+  docker compose -f "$1" up --force-recreate
 }
 function dcr {
-  docker-compose -f "$1" run "$2" "$3"
+  docker compose -f "$1" run "$2" "$3"
 }
 function dcb {
-  docker-compose -f "$1" build
+  docker compose -f "$1" build
 }
 
 # function `cl`
