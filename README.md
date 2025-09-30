@@ -1,6 +1,6 @@
 # bash_additions
 
-My custom additions for convenience and quick bash modification on another system.
+My custom additions for convenience and quick bash modifications on another system.
 
 Either:
 - copy content and append to `~/.bashrc`
