@@ -1,6 +1,8 @@
 # bash_additions
 
-Several custom additions for convenience. Can be used by:
+My custom additions for convenience and quick bash modification on another system.
+
+Either:
 - copy content and append to `~/.bashrc`
-- load it with `source bash_additions.sh` (either ad-hoc or load it from within `~/.bashrc`).
+- or load it with `source bash_additions.sh` (ad-hoc or from within `~/.bashrc`).
 
