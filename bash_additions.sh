@@ -69,9 +69,11 @@ t() {
 }
 
 
-# function `f`
-# quick find 
+# function `f` and f`f`
 f() {
+  find -L . -maxdepth 1 -iname "*$1*"
+}
+ff() {
   find -L . -iname "*$1*"  
 }
 
