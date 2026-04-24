@@ -189,3 +189,6 @@ function m {
 # disable docker BuildKit due to errors
 export DOCKER_BUILDKIT=0
 
+# better autocomplete
+bind 'set completion-prefix-display-length 2'
+bind 'set show-all-if-ambiguous on'
