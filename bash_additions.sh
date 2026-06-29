@@ -192,3 +192,7 @@ export DOCKER_BUILDKIT=0
 # better autocomplete
 bind 'set completion-prefix-display-length 2'
 bind 'set show-all-if-ambiguous on'
+
+export FZF_CTRL_T_COMMAND='find . -mindepth 1 -maxdepth 1 2>/dev/null | sed "s|^\./||"'
+eval "$(fzf --bash)"
+
